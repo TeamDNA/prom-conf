@@ -25,3 +25,11 @@ scrape_configs:
   target_groups:
     - targets:
         - 'rancher-api-integration:9010' 
+
+- job_name: 'pixsmash-api'
+  dns_sd_configs:
+  - names:
+    - api.pixsmash
+    refresh_interval: 15s
+    type: A
+    port: 5020
