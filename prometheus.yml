@@ -33,3 +33,19 @@ scrape_configs:
     refresh_interval: 15s
     type: A
     port: 5020
+
+- job_name: 'expire-worker'
+  dns_sd_configs:
+  - names:
+    - expireWorker.pixsmash
+    refresh_interval: 15s
+    type: A
+    port: 5021
+
+- job_name: 'random-server'
+  dns_sd_configs:
+  - names:
+    - randomServer.pixsmash
+    refresh_interval: 15s
+    type: A
+    port: 5022
