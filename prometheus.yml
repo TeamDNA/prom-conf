@@ -22,7 +22,7 @@ scrape_configs:
     port: 9104
 
 - job_name: 'rancher-api'
-  target_groups:
+  static_configs:
     - targets:
         - 'prometheus-rancher-exporter:9010'
 
