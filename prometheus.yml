@@ -49,3 +49,19 @@ scrape_configs:
     refresh_interval: 15s
     type: A
     port: 5022
+
+- job_name: 'mongodb'
+  dns_sd_configs:
+  - names:
+    - mongodb-exporter.pixsmash
+    refresh_interval: 15s
+    type: A
+    port: 9001
+
+- job_name: 'redis'
+  dns_sd_configs:
+  - names:
+    - redis-exporter.pixsmash
+    refresh_interval: 15s
+    type: A
+    port: 9121
